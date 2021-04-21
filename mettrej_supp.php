@@ -28,6 +28,12 @@
         <input class="supprimer" type="submit" value="Supprimer" />
         <i class="fa fa-times"></i>
       </form>
+      <?php
+        include_once("./src/modification.inc.php");
+      ?>
+      <?php
+        include_once("./src/publication.inc.php");
+      ?>
     </section>
   </body>
 </html>
