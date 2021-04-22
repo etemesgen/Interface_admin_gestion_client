@@ -21,8 +21,8 @@
         <input type="text" name="prenom" id="prenom" placeholder="" />
         <label for="age">Age:</label>
         <input type="text" name="age" id="age" placeholder="" />
-        <label for="mail">Adresse Mail:</label>
-        <input type="text" name="mail" id="mail" placeholder="" autofocus />
+        <label for="email">Adresse Mail:</label>
+        <input type="text" name="email" id="email" placeholder="" autofocus />
         <input class="mettrej" type="submit" value="Mettre à jour" />
         <i class="fa fa-pencil"></i>
         <input class="supprimer" type="submit" value="Supprimer" />

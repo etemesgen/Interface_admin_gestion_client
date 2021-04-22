@@ -71,3 +71,13 @@ label {
   cursor: pointer;
   width: 20rem;
 }
+
+.warning {
+  color: rgb(218, 31, 31);
+  font-weight: bold;
+}
+
+.success {
+  color: rgb(2, 161, 2);
+  font-weight: bold;
+}
