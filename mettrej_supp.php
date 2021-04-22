@@ -29,10 +29,10 @@
         <i class="fa fa-times"></i>
       </form>
       <?php
-        include_once("./src/modification.inc.php");
+        include_once("./src/mettrej.inc.php");
       ?>
       <?php
-        include_once("./src/publication.inc.php");
+        include_once("./src/supprimer.inc.php");
       ?>
     </section>
   </body>

@@ -18,9 +18,6 @@
 
     <section id="table_gestion">
       <table>
-        <?php
-            include_once("./src/publication.inc.php");
-        ?>
         <tr>
           <th>Identifiant</th>
           <th>Nom</th>
@@ -60,6 +57,9 @@
           <td>70</td>
           <td>tim@w3c.net</td>
         </tr>
+        <?php
+            include_once("./src/publication.inc.php");
+        ?>
       </table>
       <br />
       <br />
