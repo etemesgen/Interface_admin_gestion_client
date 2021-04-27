@@ -25,14 +25,11 @@
         <input type="text" name="email" id="email" placeholder="" autofocus />
         <input class="mettrej" type="submit" value="Mettre à jour" />
         <i class="fa fa-pencil"></i>
-        <input class="supprimer" type="send" value="Supprimer" />
+        <input class="supprimer" type="submit" value="Supprimer" />
         <i class="fa fa-times"></i>
       </form>
       <?php
         include_once("./src/mettrej.inc.php");
-      ?>
-      <?php
-        include_once("./src/supprimer.inc.php");
       ?>
     </section>
   </body>

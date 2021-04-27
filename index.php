@@ -28,9 +28,9 @@
         <tr>
           <td>
             <i class="fa fa-pencil"></i>
-            <a href="./mettrej_supp.php">Modifier</a> ou
+            <a href="./mettre_a_jour.php">Modifier</a> ou
             <i class="fa fa-times"></i>
-            <a href="./mettrej_supp.php">Supprimer</a>
+            <a href="./supprimer.php">Supprimer</a>
           </td>
           <td>Eich</td>
           <td>Branden</td>
@@ -39,8 +39,8 @@
         </tr>
         <tr>
           <td>
-            <i class="fa fa-pencil"></i> <a href="#">Modifier</a> ou
-            <i class="fa fa-times"></i> <a href="#">Supprimer</a>
+            <i class="fa fa-pencil"></i> <a href="./mettre_a_jour.php">Modifier</a> ou
+            <i class="fa fa-times"></i> <a href="./supprimer.php">Supprimer</a>
           </td>
           <td>Berners Lee</td>
           <td>Tim</td>

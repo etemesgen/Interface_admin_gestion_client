@@ -4,7 +4,7 @@ $dbname = 'client_ligue';
 $username = 'root';
 $password = '';
 
-if(isset($_POST['send'])){
+if(isset($_POST['submit'])){
     if(isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['age']) || isset($_POST['email'])){
         if(!$_POST['nom'] || !$_POST['prenom'] || !$_POST['age'] || !$_POST['email']){
               print "<p class=\"warning\">Vous avez oublié de remplir un ou plusieurs champs !</p>";
