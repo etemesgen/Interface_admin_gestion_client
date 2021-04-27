@@ -38,16 +38,6 @@
           <td>brand67@gmail.com</td>
         </tr>
         <tr>
-          <td class="cellule2">
-            <i class="fa fa-pencil"></i> <a href="#">Modifier</a> ou
-            <i class="fa fa-times"></i> <a href="#">Supprimer</a>
-          </td>
-          <td class="cellule2">Ledorf</td>
-          <td class="cellule2">Rasmus</td>
-          <td class="cellule2">55</td>
-          <td class="cellule2">rasmus@php.net</td>
-        </tr>
-        <tr>
           <td>
             <i class="fa fa-pencil"></i> <a href="#">Modifier</a> ou
             <i class="fa fa-times"></i> <a href="#">Supprimer</a>

@@ -34,7 +34,7 @@ if(isset($_POST['send'])){
                 $stmt->execute();
                 //test pour la mise à jour
                 $stmt ? print "<p class=\"success\">Les modifications ont bien été enregistrées</p>" : print "<p> Une erreur est survenue </p>"; 
-                var_dump(isset($_POST['nom']));
+                header("Location: index.php");
             }   
         }
     }

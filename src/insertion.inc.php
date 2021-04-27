@@ -24,6 +24,7 @@
              echo "<p class=\"success\">Merci le client a été ajouté ;)
              <a href=\"index.php\"Voir les publications récentes</a>
              </p>";
+             header("Location: index.php");
          }    
      }
 
