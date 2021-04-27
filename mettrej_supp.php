@@ -25,7 +25,7 @@
         <input type="text" name="email" id="email" placeholder="" autofocus />
         <input class="mettrej" type="submit" value="Mettre à jour" />
         <i class="fa fa-pencil"></i>
-        <input class="supprimer" type="submit" value="Supprimer" />
+        <input class="supprimer" type="send" value="Supprimer" />
         <i class="fa fa-times"></i>
       </form>
       <?php
