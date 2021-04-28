@@ -26,7 +26,8 @@ table {
 }
 
 th {
-  background-color: rgb(0, 128, 43);
+  background-color: #00614e;
+  color: #fff;
   width: 23rem;
   padding: 1rem;
 }
@@ -47,7 +48,7 @@ tr td a {
 }
 
 .ajouter {
-  background-color: rgb(62, 62, 252);
+  background-color: #09599a;
   text-decoration: none;
   color: #fff;
   padding: 1.5rem;

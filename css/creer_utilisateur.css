@@ -10,7 +10,7 @@ body {
 
 p {
   padding: 15px;
-  color: rgb(0, 128, 43);
+  color: #00614e;
   line-height: 2.5rem;
 }
 
@@ -43,7 +43,7 @@ label {
   color: #333;
 }
 input[type="submit"] {
-  background: rgb(0, 128, 43);
+  background: #00614e;
   line-height: 4.5rem;
   text-align: center;
   color: #fff;

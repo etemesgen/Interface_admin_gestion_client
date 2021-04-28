@@ -10,7 +10,7 @@ body {
 
 p {
   padding: 15px;
-  color: rgb(0, 128, 43);
+  color: #00614e;
   line-height: 2.5rem;
 }
 
@@ -43,7 +43,7 @@ label {
   color: #333;
 }
 .mettrej {
-  background: rgb(0, 128, 43);
+  background: #00614e;
   line-height: 4.5rem;
   text-align: center;
   color: #fff;
@@ -60,9 +60,13 @@ label {
   color: #fff;
 }
 
+#email {
+  color: rgb(145, 145, 145);
+}
+
 .supprimer {
   margin-top: 5rem;
-  background: rgb(223, 13, 13);
+  background: #d63031;
   line-height: 4.5rem;
   text-align: center;
   color: #fff;

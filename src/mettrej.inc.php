@@ -26,13 +26,13 @@
 
                 $stmt = $bdd->prepare($sql);
                 $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
-                $stmt->bindParam(':prenom', $_POST['prenom'], PDO::PARAM_INT);
-                $stmt->bindParam(':age', $_POST['age'], PDO::PARAM_STR);
-                $stmt->bindParam(':email', $_POST['email'], PDO::PARAM_INT);
+                $stmt->bindParam(':prenom', $_POST['prenom'], PDO::PARAM_STR);
+                $stmt->bindParam(':age', $_POST['age'], PDO::PARAM_INT);
+                $stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
                 $stmt->execute();
                 //test pour la mise à jour
-                $stmt ? print "<p class=\"success\">Les modifications ont bien été enregistrées</p>" : print "<p> Une erreur est survenue </p>"; 
-            //    header("Location: index.php");
+                $stmt ? print "<p class=\"success\">Les modifications ont bien été enregistrées !</p>" : print "<p> Une erreur est survenue </p>"; 
+                //header("Location: index.php");
             }      
         }
 //    }
