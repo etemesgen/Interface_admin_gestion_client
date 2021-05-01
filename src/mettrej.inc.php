@@ -8,7 +8,6 @@
         die('Erreur : '.$e->getMessage());
     }
 
-//if(isset($_POST['submit'])){
     if(isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['age']) || isset($_POST['email'])){
         if(!$_POST['nom'] || !$_POST['prenom'] || !$_POST['age'] || !$_POST['email']){
                 print "<p class=\"warning\">Vous avez oublié de remplir un ou plusieurs champs !</p>";
@@ -30,10 +29,10 @@
                 $stmt->bindParam(':age', $_POST['age'], PDO::PARAM_INT);
                 $stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
                 $stmt->execute();
+                
                 //test pour la mise à jour
                 $stmt ? print "<p class=\"success\">Les modifications ont bien été enregistrées !</p>" : print "<p> Une erreur est survenue </p>"; 
                 //header("Location: index.php");
             }      
         }
-//    }
 ?>
