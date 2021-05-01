@@ -25,28 +25,6 @@
           <th>Age</th>
           <th>Adresse Mail</th>
         </tr>
-        <tr>
-          <td>
-            <i class="fa fa-pencil"></i>
-            <a href="./mettre_a_jour.php">Modifier</a> ou
-            <i class="fa fa-times"></i>
-            <a href="./supprimer.php">Supprimer</a>
-          </td>
-          <td>Eich</td>
-          <td>Branden</td>
-          <td>55</td>
-          <td>brand67@gmail.com</td>
-        </tr>
-        <tr>
-          <td>
-            <i class="fa fa-pencil"></i> <a href="./mettre_a_jour.php">Modifier</a> ou
-            <i class="fa fa-times"></i> <a href="./supprimer.php">Supprimer</a>
-          </td>
-          <td>Berners Lee</td>
-          <td>Tim</td>
-          <td>70</td>
-          <td>tim@w3c.net</td>
-        </tr>
         <?php
             include_once("./src/publication.inc.php");
         ?>

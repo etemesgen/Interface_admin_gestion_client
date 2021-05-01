@@ -2,11 +2,20 @@
     //traitement des données à envoyer
     try{
         $bdd = new PDO('mysql:host=localhost;dbname=client_ligue;charset=utf8','root','');
+        $reponse = $bdd->query('SELECT * FROM `clients` WHERE 1');
+
+        while($clientUpdate = $reponse->fetch()){
+            $id = $clientUpdate['id_client']; 
+        }
     }
     catch(Exception $e)
     {
         die('Erreur : '.$e->getMessage());
     }
+
+    /*if(isset($_GET['id'])){
+        $id = $_GET['id'];
+    }*/
 
     if(isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['age']) || isset($_POST['email'])){
         if(!$_POST['nom'] || !$_POST['prenom'] || !$_POST['age'] || !$_POST['email']){
@@ -21,7 +30,8 @@
                     nom = :nom,
                     prenom = :prenom,
                     age = :age,
-                    WHERE email = :email";
+                    email = :email,
+                    WHERE id_client = ".$clientUpdate['id_client']."";
 
                 $stmt = $bdd->prepare($sql);
                 $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
@@ -33,6 +43,7 @@
                 //test pour la mise à jour
                 $stmt ? print "<p class=\"success\">Les modifications ont bien été enregistrées !</p>" : print "<p> Une erreur est survenue </p>"; 
                 //header("Location: index.php");
+                var_dump($stmt);
             }      
         }
 ?>

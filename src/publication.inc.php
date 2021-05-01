@@ -13,7 +13,7 @@
                 <tr>
                     <td>
                         <i class="fa fa-pencil"></i>
-                        <a href="./mettre_a_jour.php">Modifier</a> ou
+                        <a href="./mettre_a_jour.php?'.$donnee['id_client']. ' ">Modifier</a> ou
                         <i class="fa fa-times"></i>
                         <a href="./supprimer.php">Supprimer</a>
                     </td>
