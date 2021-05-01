@@ -2,6 +2,11 @@
     //traitement des données à envoyer
     try{
         $bdd = new PDO('mysql:host=localhost;dbname=client_ligue;charset=utf8','root','');
+        $reponse = $bdd->query('SELECT * FROM `clients` WHERE 1');
+
+        while($clientUpdate = $reponse->fetch()){
+            $id = $clientUpdate['id_client']; 
+        }
     }
     catch(Exception $e)
     {
@@ -32,6 +37,7 @@
                 //test pour la mise à jour
                 $stmt ? print "<p class=\"success\">Le client a bien été supprimé :(</p>" : print "<p> Une erreur est survenue </p>"; 
             //    header("Location: index.php");
+            var_dump($stmt);
            }      
         }
 ?>
