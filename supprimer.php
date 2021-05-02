@@ -14,7 +14,7 @@
   <body>
     <p>VOIR LA LISTE DES UTILISATEURS ></p>
     <section id="formulaire_creer">
-      <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+      <form action="<?php $_SERVER['PHP_SELF']?>" method="POST">
         <label for="nom">Nom:</label>
         <input type="text" name="nom" id="nom" placeholder="" autofocus />
         <label for="prenom">Prenom:</label>

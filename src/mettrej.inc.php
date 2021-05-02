@@ -27,7 +27,7 @@
                     prenom = :prenom,
                     age = :age,
                     email = :email,
-                    WHERE id_client = $id";
+                    WHERE id_client= ".$_GET['id_client']. "";
 
                 $stmt = $bdd->prepare($sql);
                 $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
