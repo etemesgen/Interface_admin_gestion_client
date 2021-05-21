@@ -48,9 +48,13 @@ tr td a {
 }
 
 .ajouter {
+  max-width: 100%;
+  width: 18rem;
   background-color: #09599a;
   text-decoration: none;
   color: #fff;
   padding: 1.5rem;
-  margin-left: 55rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
