@@ -5,9 +5,7 @@
 
         function publierLeClient(){
         // On récupère tout le contenu   
-        $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-        $bdd = new PDO('mysql:host=localhost;dbname=client_ligue', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
-        $reponse = $bdd->query('SELECT * FROM `clients` LIMIT 20');     /* LIMIT 1 : limite la liste à afficher*/ 
+        $reponse = $this->seConnecter()->query('SELECT * FROM `clients` LIMIT 20');     /* LIMIT 1 : limite la liste à afficher*/ 
     
         // On affiche chaque entrée une à une
         while ($donnee = $reponse->fetch()){

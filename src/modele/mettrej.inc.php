@@ -2,12 +2,10 @@
 
     require_once("./src/modele/bdd.inc.php");
 
-    class MettreAjourClient{
+    class MettreAjourClient extends ConnexionBdd{
 
-        function clientAjour($id_client){
-            $bdd = new PDO('mysql:host=localhost;dbname=client_ligue;charset=utf8','root','');
-            $reponse = $bdd->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
-
+        function clientAjour($id_client, $nom, $prenom, $age, $email){
+            $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = ". $id_client ."");
             while($donnees = $reponse->fetch()){
                 if(isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['age']) || isset($_POST['email'])){
 
@@ -24,10 +22,11 @@
                             prenom = :prenom,
                             age = :age,
                             email = :email,
-                            WHERE id_clients = :id_client";
+                            WHERE id_clients == ".$donnees['id_client']."";
 
                         // Vérification des lignes de la BDD
-                        $stmt = $bdd->prepare($sql);
+                        $stmt = $this->seConnecter()->prepare($sql);
+                        $stmt->bindParam(':id_client', $_POST['id_client'], PDO::PARAM_INT);
                         $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
                         $stmt->bindParam(':prenom', $_POST['prenom'], PDO::PARAM_STR);
                         $stmt->bindParam(':age', $_POST['age'], PDO::PARAM_INT);

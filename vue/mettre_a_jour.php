@@ -13,9 +13,10 @@
   </head>
   <body>
   <a href="index.php"><p>VOIR LA LISTE DES UTILISATEURS ></p></a>
+  <?php var_dump(isset($_GET['id_client']));?>
     <section id="formulaire_creer">
       <form action="#" method="POST">
-      <?php $mettreAjour->clientAjour("?"); ?>
+      <?php $mettreAjour->clientAjour('$id_client', "?", "?", "?", "?"); ?>
         <label for="nom">Nom :</label>
         <input type="text" name="nom" id="nom" placeholder="<?= $mettreAjour->afficherLeNom($_GET['id_client']) ?>" autofocus />
         <label for="prenom">Prenom :</label>

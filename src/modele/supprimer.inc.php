@@ -21,8 +21,7 @@
                     age = :age,
                     WHERE email = :email";
 
-                $bdd = new PDO('mysql:host=localhost;dbname=client_ligue;charset=utf8','root','');
-                $stmt = $bdd->prepare($sql);
+                $stmt = $this->seConnecter()->prepare($sql);
                 $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
                 $stmt->bindParam(':prenom', $_POST['prenom'], PDO::PARAM_STR);
                 $stmt->bindParam(':age', $_POST['age'], PDO::PARAM_INT);

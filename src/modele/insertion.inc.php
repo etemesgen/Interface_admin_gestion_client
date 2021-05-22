@@ -16,8 +16,7 @@
                     print "<p class=\"warning\">Veuillez saisir des nombres pour votre âge...</p>";
                 }
                 else{
-                    $bdd = new PDO('mysql:host=localhost;dbname=client_ligue;charset=utf8','root','');
-                    $req = $bdd->prepare('INSERT INTO clients(nom, prenom, age, email)VALUES(?,?,?,?)');
+                    $req = $this->seConnecter()->prepare('INSERT INTO clients(nom, prenom, age, email)VALUES(?,?,?,?)');
                     $req->execute(array($_POST['nom'], $_POST['prenom'], $_POST['age'], $_POST['email']));
        
                     echo "<p class=\"success\">Merci le client a été ajouté ;)<br></p>";

@@ -108,7 +108,7 @@ input[type="submit"] {
 .warning {
   color: rgb(218, 31, 31);
   font-weight: bold;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .success {

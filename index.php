@@ -6,11 +6,11 @@
         ajouterClient(); 
         break;
         
-        case "mettreAjour&id_client":
+        case "mettreAjour&idClient":
         mettreAjourClient();
         break;
         
-        case "supprimerClient":
+        case "supprimerClient&supprimer":
         supprimerClient();
         break;
 
