@@ -10,7 +10,7 @@
         mettreAjourClient();
         break;
         
-        case "supprimerClient&supprimer":
+        case "supprimer&supprimer":
         supprimerClient();
         break;
 

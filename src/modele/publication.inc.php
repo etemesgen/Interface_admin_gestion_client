@@ -13,9 +13,9 @@
                     <tr>
                         <td>
                             <i class="fa fa-pencil"></i>
-                            <a href="./index.php?action=mettreAjour&idClient='.$donnee['id_client']. ' ">Modifier</a> ou
+                            <a href="index.php?action=mettreAjour&idClient='.$donnee['id_client']. ' ">Modifier</a> ou
                             <i class="fa fa-times"></i>
-                            <a href="./index.php?action=supprimer&supprimer='.$donnee['id_client']. ' ">Supprimer</a>
+                            <a href="index.php?action=supprimer&supprimer='.$donnee['id_client']. ' ">Supprimer</a>
                         </td>
                         <td>'.$donnee['nom'].'</td>
                         <td>'.$donnee['prenom'].'</td>

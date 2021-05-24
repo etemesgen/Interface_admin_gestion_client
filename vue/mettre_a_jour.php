@@ -13,7 +13,6 @@
   </head>
   <body>
   <a href="index.php"><p>VOIR LA LISTE DES UTILISATEURS ></p></a>
-  <?php var_dump(isset($_GET['id_client']));?>
     <section id="formulaire_creer">
       <form action="#" method="POST">
       <?php $mettreAjour->clientAjour('$id_client', "?", "?", "?", "?"); ?>
