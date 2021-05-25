@@ -18,7 +18,7 @@
 
     function supprimerClient(){
         $supprimer = new SuppressionClient();
-        $supprimer->supprimerClient($_GET['supprimer']);
+        $supprimer->supprimerClient();
         require("./vue/supprimer.php");
     }
 

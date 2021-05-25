@@ -1,3 +1,4 @@
+@media only screen and (max-width: 900px) {
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 html {
@@ -9,10 +10,12 @@ body {
 }
 
 p {
-  padding: 15px;
-  color: #00614e;
-  line-height: 2.5rem;
-  margin: 4rem 0rem 0rem 53rem;
+   display: flex;
+   justify-content: left;
+   padding: 15px;
+   color: #00614e;
+   line-height: 2.5rem;
+   margin: 4rem 0rem 0rem 10rem;
 }
 
 a{
@@ -27,15 +30,15 @@ a{
 #hr1{
   position: absolute;
   width: 5rem;
-  margin: -1rem 0rem 0rem 53rem;
+  margin: -1rem 0rem 0rem 10rem;
   color: #00614e;
 }
-
+  
 #hr2{
   position: absolute;
   width: 5rem;
-  margin: 1.4rem 0rem 0rem 50.4rem;
-  -webkit-transform:rotate(90deg);
+  margin: 1.4rem 0rem 0rem 7.4rem;
+  -webkit-transform:rotate(90deg); 
   transform:rotate(90deg);
   color: #00614e;
 }
@@ -78,12 +81,12 @@ label {
   font-size: inherit;
   cursor: pointer;
   width: 20rem;
-  margin-left: 54rem;
+  margin-left: 10rem;
 }
 
 .fa {
   position: absolute;
-  margin: -3.2rem 0rem 0rem 70rem;
+  margin: -3.2rem 0rem 0rem 26rem;
   max-width: 100%;
   color: #fff;
 }
@@ -95,27 +98,27 @@ label {
 #hr3{
   position: absolute;
   width: 5rem;
-  margin: 0rem 0rem 0rem 90rem;
+  margin: 0rem 0rem 0rem 40rem;
   color: #00614e;
 }
-
+  
 #hr4{
   position: absolute;
   width: 5rem;
-  margin: -2.6rem 0rem 0rem 92.3rem;
+  margin: -2.6rem 0rem 0rem 42.3rem;
   -webkit-transform:rotate(90deg);
   transform:rotate(90deg);
   color: #00614e;
 }
 
 #hr5{
-  width: 43.2rem;
-  margin: 3rem 0rem 0rem 52rem;
+  width: 37rem;
+  margin: 3rem 0rem 0rem 8rem;
 }
 
 #hr6{
-  width: 43.2rem;
-  margin: 3rem 0rem 0rem 52rem;
+  width: 37rem;
+  margin: 3rem 0rem 0rem 8rem;
 }
 
 .supprimer {
@@ -128,7 +131,7 @@ label {
   font-size: inherit;
   cursor: pointer;
   width: 20rem;
-  margin-left: 54rem;
+  margin-left: 10rem;
 }
 
 .warning {
@@ -139,4 +142,5 @@ label {
 .success {
   color: rgb(2, 161, 2);
   font-weight: bold;
+}
 }

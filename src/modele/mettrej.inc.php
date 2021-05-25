@@ -6,7 +6,7 @@
 
         function clientAjour($id_client, $nom, $prenom, $age, $email){
             $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = ". $id_client ."");
-            while($donnees = $reponse->fetch()){
+            //$donnees = $reponse->fetch();
                 if(isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['age']) || isset($_POST['email'])){
 
                     if(!$_POST['nom'] || !$_POST['prenom'] || !$_POST['age'] || !$_POST['email']){
@@ -21,12 +21,11 @@
                             nom = :nom,
                             prenom = :prenom,
                             age = :age,
-                            email = :email,
-                            WHERE id_clients == ".$donnees['id_client']."";
+                            WHERE email = :email";/*,
+                            WHERE id_clients == ".$donnees['id_client']."";*/
 
                         // Vérification des lignes de la BDD
                         $stmt = $this->seConnecter()->prepare($sql);
-                        $stmt->bindParam(':id_client', $_POST['id_client'], PDO::PARAM_INT);
                         $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
                         $stmt->bindParam(':prenom', $_POST['prenom'], PDO::PARAM_STR);
                         $stmt->bindParam(':age', $_POST['age'], PDO::PARAM_INT);
@@ -35,33 +34,31 @@
                 
                        // Test pour la mise à jour
                         $stmt ? print "<p class=\"success\">Les modifications ont bien été enregistrées !</p>" : print "<p> Une erreur est survenue </p>"; 
-                        header("Location: index.php");
                     }
                 }
             }
-        }
 
     function afficherLeNom($id_client){
-        $reponse = $this->dbConnect()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
-        $donnees = $response->fetch();
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
         return $donnees['nom'];
     }
 
     function afficherLePrenom($id_client){
-        $reponse = $this->dbConnect()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
-        $donnees = $response->fetch();
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
         return $donnees['prenom'];
     }
 
     function afficherAge($id_client){
-        $reponse = $this->dbConnect()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
         $donnees = $reponse->fetch();
         return $donnees['age'];
     }
 
     function afficherEmail($id_client){
-        $reponse = $this->dbConnect()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
-        $donnees = $response->fetch();
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
         return $donnees['email'];
     }
 }          

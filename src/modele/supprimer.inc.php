@@ -5,6 +5,7 @@
     class SuppressionClient extends ConnexionBdd{
        
         function supprimerClient(){
+            $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = ". $id_client ."");
             if(isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['age']) || isset($_POST['email'])){
 
                 if(!$_POST['nom'] || !$_POST['prenom'] || !$_POST['age'] || !$_POST['email']){
@@ -19,7 +20,8 @@
                     nom = :nom,
                     prenom = :prenom,
                     age = :age,
-                    WHERE email = :email";
+                    email = :email,
+                    WHERE id_clients == ".$donnees['id_client']."";
 
                 $stmt = $this->seConnecter()->prepare($sql);
                 $stmt->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
@@ -33,5 +35,28 @@
            }      
         }
     }
-}
+    function afficherLeNom($id_client){
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
+        return $donnees['nom'];
+    }
+
+    function afficherLePrenom($id_client){
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
+        return $donnees['prenom'];
+    }
+
+    function afficherAge($id_client){
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
+        return $donnees['age'];
+    }
+
+    function afficherEmail($id_client){
+        $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = " . $id_client . "");
+        $donnees = $reponse->fetch();
+        return $donnees['email'];
+    }
+}        
 ?>

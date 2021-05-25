@@ -1,19 +1,19 @@
  <?php
      require("./src/controlleur/controlleur.php");
 
-     switch(isset($_GET['action'])){
+     switch($_GET['action']){
         case "ajouterLeClient":
         ajouterClient(); 
         break;
         
-        case "mettreAjour&idClient":
+        case "mettreAjour":
         mettreAjourClient();
         break;
         
-        case "supprimer&supprimer":
+        case "supprimerClient":
         supprimerClient();
         break;
-
+         
         default : afficherClient();
      }
 ?>
