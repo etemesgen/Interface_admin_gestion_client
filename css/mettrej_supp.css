@@ -81,7 +81,14 @@ label {
   margin-left: 54rem;
 }
 
-.fa {
+#modif {
+  position: absolute;
+  margin: -3.2rem 0rem 0rem 70rem;
+  max-width: 100%;
+  color: #fff;
+}
+
+#supp{
   position: absolute;
   margin: -3.2rem 0rem 0rem 70rem;
   max-width: 100%;

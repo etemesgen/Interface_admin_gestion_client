@@ -27,12 +27,12 @@
         <label for="email">Adresse Mail :</label>
         <input type="text" name="email" id="email" placeholder="<?= $mettreAjour->afficherEmail($_GET['idClient']) ?>" />
         <a href="index.php?action=mettreAjour&idClient"><input class="mettrej" type="submit" value="Mettre à jour" /></a>
-        <i class="fa fa-pencil"></i>
+        <i class="fa fa-pencil" id="modif"></i>
         <hr id="hr3">
         <hr id= "hr4">
         <hr id="hr5">
         <a href="index.php?action=supprimerClient&supprimer"><input class="supprimer" type="submit" value="Supprimer" /></a>
-        <i class="fa fa-times"></i>
+        <i class="fa fa-times" id="supp"></i>
         <hr id="hr6">
         <?php $mettreAjour->clientAjour('$id_client', "?", "?", "?", "?"); ?>
       </form>

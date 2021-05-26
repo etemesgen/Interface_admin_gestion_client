@@ -1,19 +1,33 @@
  <?php
      require("./src/controlleur/controlleur.php");
-
-     switch($_GET['action']){
-        case "ajouterLeClient":
+     
+      if(isset($_GET['action'])){
+         if($_GET['action'] == 'ajouterLeClient'){
+            ajouterClient();
+         } 
+         elseif($_GET['action'] == 'mettreAjour'){
+            mettreAjourClient();
+         }
+         elseif($_GET['action'] == 'supprimerClient'){
+            supprimerClient();
+         }
+      }
+      else{
+         afficherClient();
+      }
+  /*   switch(isset($_GET['action'])){
+        case $_GET['action'] == "ajouterLeClient":
         ajouterClient(); 
         break;
         
-        case "mettreAjour":
+        case $_GET['action'] == "mettreAjour":
         mettreAjourClient();
         break;
         
-        case "supprimerClient":
+        case $_GET['action'] == "supprimerClient":
         supprimerClient();
         break;
          
         default : afficherClient();
-     }
+     }*/
 ?>
