@@ -1,8 +1,8 @@
 <?php
-    require_once("./src/modele/insertion.inc.php");
-    require_once("./src/modele/publication.inc.php");
-    require_once("./src/modele/supprimer.inc.php");
-    require_once("./src/modele/mettrej.inc.php");
+    require_once("./src/modele/ajouterClient.inc.php");
+    require_once("./src/modele/affichageClient.inc.php");
+    require_once("./src/modele/supprimerClient.inc.php");
+    require_once("./src/modele/mettreAjourClient.inc.php");
 
 
     function afficherClient(){

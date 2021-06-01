@@ -1,6 +1,6 @@
 <?php
 
-    require_once("./src/modele/bdd.inc.php");
+    require_once("./src/modele/connexionBdd.inc.php");
 
     class SuppressionClient extends ConnexionBdd{
        

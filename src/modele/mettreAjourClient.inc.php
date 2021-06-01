@@ -1,12 +1,12 @@
 <?php
 
-    require_once("./src/modele/bdd.inc.php");
+    require_once("./src/modele/connexionBdd.inc.php");
 
     class MettreAjourClient extends ConnexionBdd{
 
         function clientAjour($id_client, $nom, $prenom, $age, $email){
-            $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = ". $id_client ."");
-            //$donnees = $reponse->fetch();
+            $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = '. $id_client .'");
+            $donnees = $reponse->fetch();
                 if(isset($_POST['id_client']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['age']) && isset($_POST['email'])){
 
                     if(!$_POST['nom'] || !$_POST['prenom'] || !$_POST['age'] || !$_POST['email']){
@@ -16,14 +16,7 @@
                         print "<p class=\"warning\">Vous devez saisir des caractères...</p>";
                     } 
                     else{
-                        $requete = $bdd->prepare("
-                        UPDATE clients SET
-                            nom = ?,
-                            prenom = ?,
-                            age = ?,
-                            email = ?,
-                        WHERE id_client = ?
-                        ");
+                        $requete = $this->seConnecter()->prepare("UPDATE clients SET nom = ?, prenom = ?, age = ?, email = ?, WHERE id_client = ?");
                     
                         // on execute 
                         $requete->execute(

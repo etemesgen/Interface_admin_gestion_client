@@ -1,5 +1,5 @@
 <?php
-     include_once("./src/modele/bdd.inc.php");
+     include_once("./src/modele/connexionBdd.inc.php");
 
      class AjouterClient extends ConnexionBdd{
 
