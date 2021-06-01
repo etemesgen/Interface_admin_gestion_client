@@ -34,7 +34,9 @@
         <a href="index.php?action=supprimerClient&supprimer"><input class="supprimer" type="submit" value="Supprimer" /></a>
         <i class="fa fa-times" id="supp"></i>
         <hr id="hr6">
-        <?php $mettreAjour->clientAjour('$id_client', "?", "?", "?", "?"); ?>
+        <?php $mettreAjour->clientAjour($_POST['idClient'], $_POST['nom'], $_POST['prenom'], $_POST['age'], $_POST['email']); 
+          var_dump(isset($_POST['nom']));
+        ?>
       </form>
     </section>
   </body>
