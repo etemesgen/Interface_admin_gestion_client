@@ -11,6 +11,9 @@
          elseif($_GET['action'] == 'supprimerClient'){
             supprimerClient();
          }
+         elseif($_GET['action'] == 'mettreAjourBdd'){
+            mettreAjourBdd();
+         }
       }
       else{
          afficherClient();

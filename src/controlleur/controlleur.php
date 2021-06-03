@@ -27,4 +27,11 @@
         // $mettreAjour->clientAjour();
         require("./vue/mettre_a_jour.php");
     }
+
+    function mettreAjourBdd()
+    {
+        $mettreAjour = new MettreAjourClient();
+        $mettreAjour->clientAjour($_GET['idClient'], $_POST['nom'], $_POST['prenom'], $_POST['age'], $_POST['email']);
+        header('Location:index.php');
+    }
 ?>

@@ -17,15 +17,15 @@
       <hr id= "hr2">
   <a href="index.php"><p>VOIR LA LISTE DES UTILISATEURS ></p></a>
     <section id="formulaire_creer">
-      <form action="#" method="POST">
+      <form action="index.php?action=mettreAjourBdd&idClient=<?= $_GET['idClient'] ?>" method="POST">
         <label for="nom">Nom :</label>
-        <input type="text" name="nom" id="nom" placeholder="<?= $mettreAjour->afficherLeNom($_GET['idClient']) ?>" autofocus />
+        <input type="text" name="nom" id="nom" value="<?= $mettreAjour->afficherLeNom($_GET['idClient']) ?>" autofocus />
         <label for="prenom">Prenom :</label>
-        <input type="text" name="prenom" id="prenom" placeholder="<?= $mettreAjour->afficherLePrenom($_GET['idClient']) ?>" />
+        <input type="text" name="prenom" id="prenom" value="<?= $mettreAjour->afficherLePrenom($_GET['idClient']) ?>" />
         <label for="age">Age :</label>
-        <input type="text" name="age" id="age" placeholder="<?= $mettreAjour->afficherAge($_GET['idClient']) ?>" />
+        <input type="text" name="age" id="age" value="<?= $mettreAjour->afficherAge($_GET['idClient']) ?>" />
         <label for="email">Adresse Mail :</label>
-        <input type="text" name="email" id="email" placeholder="<?= $mettreAjour->afficherEmail($_GET['idClient']) ?>" />
+        <input type="text" name="email" id="email" value="<?= $mettreAjour->afficherEmail($_GET['idClient']) ?>" />
         <a href="index.php?action=mettreAjour&idClient"><input class="mettrej" type="submit" value="Mettre à jour" /></a>
         <i class="fa fa-pencil" id="modif"></i>
         <hr id="hr3">
@@ -33,10 +33,7 @@
         <hr id="hr5">
         <a href="index.php?action=supprimerClient&supprimer"><input class="supprimer" type="submit" value="Supprimer" /></a>
         <i class="fa fa-times" id="supp"></i>
-        <hr id="hr6">
-        <?php $mettreAjour->clientAjour($_POST['id_client'], $_POST['nom'], $_POST['prenom'], $_POST['age'], $_POST['email']); 
-          var_dump(isset($_POST['nom']));
-        ?>
+        <hr id="hr6">       
       </form>
     </section>
   </body>
