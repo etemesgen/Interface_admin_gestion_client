@@ -9,8 +9,8 @@
                     $reponse = $this->seConnecter()->query("SELECT * FROM `clients` WHERE id_client = '. $id_client .'");
                     $donnees = $reponse->fetch();
             
-                    $req = $this->seConnecter()->prepare('UPDATE clients SET  nom = :nom, prenom = :prenom, age = :age, email = :email WHERE id_client = ' . $id_client. '');
-                    $req->execute(array(
+                    $requete = $this->seConnecter()->prepare('UPDATE clients SET  nom = :nom, prenom = :prenom, age = :age, email = :email WHERE id_client = ' . $id_client. '');
+                    $requete->execute(array(
                         'nom' => $nom,
                         'prenom' => $prenom,
                         'age' =>  $age,

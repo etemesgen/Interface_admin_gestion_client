@@ -8,7 +8,7 @@
          elseif($_GET['action'] == 'mettreAjour'){
             mettreAjourClient();
          }
-         elseif($_GET['action'] == 'supprimerClient'){
+         elseif($_GET['action'] == 'supprimer'){
             supprimerClient();
          }
          elseif($_GET['action'] == 'mettreAjourBdd'){

@@ -18,8 +18,8 @@
 
     function supprimerClient(){
         $supprimer = new SuppressionClient();
-        $supprimer->supprimerClient();
-        require("./vue/supprimer.php");
+        $supprimer->supprimerClient($_GET['supprimer']);
+        header('Location:index.php');
     }
 
     function mettreAjourClient(){
