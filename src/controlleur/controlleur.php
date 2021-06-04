@@ -12,7 +12,6 @@
 
     function ajouterClient(){
         $ajouterLeClient = new AjouterClient();
-        // $ajouterLeClient->insererClient();
         require("./vue/creer_utilisateur.php");
     }
 
@@ -24,7 +23,6 @@
 
     function mettreAjourClient(){
         $mettreAjour = new MettreAjourClient();
-        // $mettreAjour->clientAjour();
         require("./vue/mettre_a_jour.php");
     }
 
