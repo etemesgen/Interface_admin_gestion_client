@@ -10,15 +10,15 @@
 
 
 ### Page pour ajouter le client :
-![Ajouter client](asset/Interfaceajouterclient.png)
+![Ajouter client](asset/Interfaceajouterclient.PNG)
 
 
 ### Page pour modifier et supprimer le client :
-![Modifier_supprimer client](asset/Interfacemodifiersuppclient.png)
+![Modifier_supprimer client](asset/Interfacemodifiersuppclient.PNG)
 
 **Voici enfin la base de données contenant les informations des clients :**
 
-![Base de données](asset/BDD.png)
+![Base de données](asset/BDD.PNG)
 
 <span style="text-decoration: underline">Aspect technique </span>
 
