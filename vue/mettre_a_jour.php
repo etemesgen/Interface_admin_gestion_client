@@ -31,7 +31,7 @@
         <hr id="hr3">
         <hr id= "hr4">
         <hr id="hr5">
-        <a href="index.php?action=supprimer=<?= $mettreAjour->supprimerClient($_GET['idClient']) ?>"><input class="supprimer" type="submit" value="Supprimer" /></a>
+        <a href="index.php?action=supprimer&supprimer=<?/*=$mettreAjour->supprimerClient($_GET['idClient']) */?>"><input class="supprimer" type="submit" value="Supprimer" /></a>
         <i class="fa fa-times" id="supp"></i>
         <hr id="hr6">       
       </form>
